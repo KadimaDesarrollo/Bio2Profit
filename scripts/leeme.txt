@@ -1,0 +1,2 @@
+Directorio donde Deberan ir los script de Javascript
+que no tengan que ver con jquery
