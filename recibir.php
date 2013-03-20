@@ -22,7 +22,7 @@ if ($_FILES["file"]["error"] > 0)
 else
 {	If ( in_array($extension, $allowedExts))  //Validando la extension del archivo
 	{	if (in_array($_FILES["file"]["type"], $allowedTypes)) //Validando el tipo de archivo
-		{	if ( ($_FILES["file"]["size"] < 20480))  //Validando tamaño El limite de tamaño esta en bytes todo: Tamaño maximo en config
+		{	if ( ($_FILES["file"]["size"] < 80000))  //Validando tamaño El limite de tamaño esta en bytes todo: Tamaño maximo en config
 			{	$ok = true;
 			}		//todo: validar tamaño archivo <3bytes
 			else
@@ -118,10 +118,10 @@ if ($ok == true)  //Paso las validaciones iniciales
 
 //			rename("incoming/".$archivo, "incoming\\Historico\\".$archivo);  //Archivados carpeta historica
 /*
-Estatus  	1 = Linea En Blanco
-			0 =	Sin novedades
+Estatus  	0 =	Sin novedades
+			1 = Linea En Blanco
 			2 = Exceso de Datos
-			3 = Linea Completa
+			3 = Linea incompleta
 			4 = Campo(s) Vacio
 
 */

@@ -18,8 +18,8 @@ $(document).ready(function() {
 			{display: 'Entrada'         	, name : 'Entrada'        	, width :  65, align: 'center'},
 			{display: 'Salida'          	, name : 'Salida'         	, width :  65, align: 'center'},
 			{display: 'Horas Trabajadas'	, name : 'Tiempo_Trabajado' , width :  65, align: 'center'},
-			{display: 'Estatus'           	, name : 'Estatus'         	, width :  15, align: 'center'},
-			{display: 'Notas:'             	, name : 'Campos'          	, width : 158, align: 'center'},
+			{display: 'Estatus'           	, name : 'Estatus'         	, width :  32, align: 'center'},
+			{display: 'Notas:'             	, name : 'Campos'          	, width : 210, align: 'center'},
 			 		],
 		usepager : true,
 		title    : 'Accesos Diarios',
@@ -54,7 +54,10 @@ if ($numrows)
 						<td><span align='right'>".$array['Entrada']."</span></td>
 						<td>".$array['Salida']."</td>
 						<td>".$array['Tiempo_Trabajado']."</td>
-						<td>".$array['Estatus']."</td>
+						<td><a>
+							<img src='images/st_".$array['Estatus'].".jpg' width='30' height='30'>
+							</a>
+						</td>
 						<td>".$array['Campos']."</td>";
 		echo $lineapr."</tr>";
 		$c++;						
